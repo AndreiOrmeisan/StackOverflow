@@ -1,0 +1,66 @@
+.Table {
+  border: 1px solid grey;
+  border-right: solid white;
+  height: 160px;
+}
+
+.LeftPost {
+  float: left;
+  margin-top: 100px;
+}
+
+.App-Votes {
+  width: 60px;
+  height: 40px;
+  margin-left: 30px;
+  margin-top: -90px;
+}
+
+.App-Answer {
+  width: 60px;
+  height: 40px;
+  margin-top: -15px;
+  margin-left: 30px;
+}
+
+.App-View {
+  width: 60px;
+  height: 40px;
+  margin-top: -15px;
+  margin-left: 30px;
+}
+
+.TextLeftPost {
+  margin-left: 30px;
+  margin-top: -40px;
+  color: grey;
+}
+
+.App-Title {
+  margin-left: 100px;
+  margin-top: 10px;
+  color: blue;
+  cursor: pointer;
+}
+
+.App-Title:hover {
+  color: rgb(0, 162, 255);
+}
+
+.App-Body {
+  margin-top: -30px;
+  margin-left: 100px;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.2em;
+}
+
+.App-Tag {
+  color: gray;
+  margin-top: -15px;
+  margin-left: 100px;
+  border: 1px;
+  border-radius: 5px;
+  background-color: rgb(215, 239, 250);
+  width: auto;
+}

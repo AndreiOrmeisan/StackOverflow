@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./components/post/post.css" />
+    <link rel="stylesheet" type="text/css" href="./components/user/user.css" />
+    <link rel="stylesheet" type="text/css" href="./components/headTabel/headTabel.css" />
+    <title>StackOverflow</title>
+    <link rel="stylesheet" type="text/css" href="list.css" />
+  </head>
+
+  <body>
+    <div w3-include-html="./components/mainBar/mainBar.html"></div>
+    <div class="List">
+      <div class="Intro">
+        <div class="Left">
+          <text class="AllQuestions">All Questions</text>
+        </div>
+        <button class="Button" onclick="window.open('http://localhost/askQuestion.html','_self')">
+          Ask Question
+        </button>
+        <p class="Count">190230</p>
+        <button class="Button2">
+          Filter
+        </button>
+        <div class="ToolBar">
+          <a href="#newest">Newest</a>
+          <a href="#active">Active</a>
+          <a href="#bountied">Bountied</a>
+          <a href="#unanswered">Unanswered</a>
+          <button class="popButton">More</button>
+        </div>
+      </div>
+      <div class="table"></div>
+      <div w3-include-html="./components/buttonForPage/buttonForPage.html"></div>
+    </div>  
+    
+    <template class="template-post">
+      <div class="Table">
+        <div class="LeftPost">
+          <p class="App-Votes">
+            <p class="TextLeftPost">votes</p>
+          </p>
+          <p class="App-Answer">
+            <p class="TextLeftPost">answer</p>
+          </p>
+          <p class="App-View">
+            <p class="TextLeftPost">view</p>
+          </p>
+        </div>
+        <div class="Post">
+          <p class="App-Title" onclick="alert('CommentsAndResponse')">
+          </p>
+          <p class="App-Body"></p>
+          <p class="App-Tag"></p>
+        </div>
+        <div class="UserTable">
+          <img class="Image" src="user.jpg" alt="user"></img>
+          <div class="PostDate"></div>
+          <div class="UserName"></div>
+      </div>
+    </template>
+
+    <script src="includeHTML.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

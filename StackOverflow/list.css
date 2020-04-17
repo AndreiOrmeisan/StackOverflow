@@ -1,0 +1,27 @@
+.List {
+  border: 0.1px solid grey;
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-right: 400px;
+  height: auto;
+  color: black;
+}
+.centercolumn {
+  border: 1px solid black;
+  width: auto;
+  color: #333;
+  background-color: #fff;
+  text-align: center;
+  margin-left: 200px;
+  margin-right: 350px;
+  margin-top: 50px;
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+

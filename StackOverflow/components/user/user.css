@@ -1,0 +1,21 @@
+.UserTable {
+  float: right;
+  margin-top: -20px;
+  margin-right: 20px;
+  width: 200px;
+  height: 80px;
+}
+
+.UserName {
+  color: rgb(51, 120, 248);
+  margin-left: 70px;
+}
+.PostDate {
+  color: grey;
+  margin-top: -60px;
+  margin-left: 70px;
+}
+
+.Image {
+  margin-top: 15px;
+}

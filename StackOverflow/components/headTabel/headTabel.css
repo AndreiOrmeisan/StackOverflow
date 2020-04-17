@@ -1,0 +1,78 @@
+.Intro {
+    height: 80px;
+    border-top: solid white;
+    border-right: solid white;
+  }
+  
+  .Left {
+    float: left;
+    width: 300px;
+    height: 75px;
+  }
+  
+  .AllQuestions {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 15px;
+  }
+  .Button {
+    margin-left: 330px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(46, 46, 196);
+    width: auto;
+    height: 30px;
+  }
+  
+  .Button2 {
+    float: left;
+    margin-left: 650px;
+    margin-top: -37px;
+    width: 70px;
+    height: 24px;
+    background-color: rgb(114, 229, 250);
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .ToolBar {
+    overflow: hidden;
+    background-color: white;
+    margin-left: 270px;
+    margin-top: 10px;
+    border: 1px solid black;
+    width: 340px;
+    height: 20px;
+    border-radius: 5px;
+  }
+  .ToolBar a {
+    float: left;
+    color: black;
+    padding: 1px 10px;
+    border-right: 1px solid black;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  
+  .ToolBar a:focus {
+    background-color: rgb(217, 247, 247);
+  }
+  
+  .ToolBar a:hover {
+    background-color: whitesmoke;
+  }
+  
+  .Count {
+    float:left;
+    margin-right: 450px;
+    margin-bottom: -50px;
+    margin-top:-30px;
+    margin-left:15px
+  }
+  
+  .popButton{
+    color:black;
+    border: none;
+    background: none;
+  }
