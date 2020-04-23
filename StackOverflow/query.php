@@ -17,11 +17,10 @@ Posts.PostTypeId,
 Posts.Tags,
 Posts.CreationDate,
 Users.DisplayName,
-Badges.Name
-FROM Posts, Users, Badges
-WHERE Posts.PostTypeId = 1 
-    AND Users.Id = Posts.OwnerUserId
-    AND Badges.Id = Users.Reputation
+Posts.Id
+FROM Posts, Users
+WHERE Posts.OwnerUserId = Users.Id
+    AND Posts.PostTypeId = 1 
 ORDER BY Posts.CreationDate DESC
 OFFSET $page ROWS
 FETCH NEXT $count ROWS ONLY";
@@ -40,7 +39,6 @@ while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC)) {
     $layout = new post();
     $layout->Title = $row['Title'];
     $layout->DisplayName = $row['DisplayName'];
-    $layout->Name = $row['Name'];
     $layout->CreationDate = $row['CreationDate'];
     $layout->Tags = $row['Tags'];
     $layout->ViewCount = $row['ViewCount'];

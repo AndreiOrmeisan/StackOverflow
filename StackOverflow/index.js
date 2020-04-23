@@ -1,8 +1,8 @@
 var pageNumber = 1;
-var count = 1;
+var count = 5;
 
 async function ComponentDidMount(clear) {
-  const respons = await fetch("/StackOverflow/posts.php/?page/"+pageNumber+"/count/"+count);
+  const respons = await fetch("/StackOverflow/crudOperations.php/?page/"+pageNumber+"/count/"+count);
   const posts = await respons.json();
 
   const table = document.querySelector(".table");
@@ -24,8 +24,17 @@ async function ComponentDidMount(clear) {
     tmplPost.querySelector(".App-View").innerText = element.ViewCount;
     tmplPost.querySelector(".PostDate").innerText = element.CreationDate.date;
     tmplPost.querySelector(".UserName").innerText = element.DisplayName;
+    tmplPost.querySelector(".Delete").id = element.Id;
+    tmplPost.querySelector(".UpdateButton").id = element.Id;
     table.appendChild(tmplPost);
   });
+}
+
+async function TotalQuestions(){
+  const respons = await fetch("/StackOverflow/totalQuestions.php");
+  const total = await respons.json();
+
+  document.querySelector(".Count").innerText = total;
 }
 
 ComponentDidMount(false);

@@ -7,7 +7,7 @@ if( $stmstCount === false) {
 }
 
 $count = sqlsrv_fetch_array( $stmtCount, SQLSRV_FETCH_ASSOC);
-echo "<strong>Total Questions: </strong>";
-print_r(array_values($count)[0]);
-echo "<br/>";
+
+header("Content-Type: application/json");
+echo json_encode(utf8_decode($count));
 ?>

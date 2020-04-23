@@ -18,10 +18,27 @@
   max-width: 100%;
 }
 
+.Delete {
+  margin-left: 10px;
+  margin-top: 20px;
+  background-color: rgb(42, 179, 243);
+  padding: 7px 7px;
+  border-radius: 5px;
+  border: none;
+}
 
+.UpdateButton {
+  background-color: rgb(42, 179, 243);
+  padding: 7px 7px;
+  border-radius: 5px;
+  border: none;
+}
 
-
-
-
-
-
+.Delete:hover {
+  background-color: rgb(29, 29, 228);
+  color: white;
+}
+.UpdateButton:hover {
+  background-color: rgb(29, 29, 228);
+  color: white;
+}

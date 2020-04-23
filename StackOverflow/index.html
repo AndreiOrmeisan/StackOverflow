@@ -2,25 +2,70 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./components/post/post.css" />
-    <link rel="stylesheet" type="text/css" href="./components/user/user.css" />
-    <link rel="stylesheet" type="text/css" href="./components/headTabel/headTabel.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="./components/post/post.css"/>
+    <link rel="stylesheet" type="text/css" href="./components/user/user.css"/>
+    <link rel="stylesheet" type="text/css" href="./components/headTabel/headTabel.css"/>
+    <link rel="stylesheet" type="text/css" href="./components/modal/modal.css"/>
     <title>StackOverflow</title>
     <link rel="stylesheet" type="text/css" href="list.css" />
   </head>
-
   <body>
+    <div class="modal">
+      <div class = "modal-content">
+        <div class="Close" onclick="CloseAsk()">+</div>
+          <form class="Form">
+            <h1 id = "TitleModal">Ask your question</h1>
+            <p class="Text">
+              <strong>Title</strong>
+            </p>
+            <p class="Description" >
+              Be specific and imagine you’re asking a question to another person
+            </p>
+            <input class="Title-Box" name="title" type="text" value=""/>
+            <p class="Text">
+              <strong>Body</strong>
+            </p>
+            <p class="Description">
+              Include all the information someone would need to answer your question
+            </p>
+            <input class="Body-Box" name="body" type="text" value=""/>
+            <p class="Text"> 
+              <strong>Tags</strong>
+            </p>
+            <p class="Description">
+              Add up to 5 tags to describe what your question is about
+            </p>
+            <input class="Tags-Box" name="tag" type="text" value=""/>
+            <input
+              class="AskButton"
+              name="submit"
+              type="submit"
+              value="Post your question"
+              style=" border:none;
+              border-radius: 5px;
+              padding: 10px 10px;
+              margin-top: 10px;
+              margin-left:170px;
+              background-color: rgb(33, 131, 243);
+              color:white;"
+            />
+          </form>
+          <div class = "Messenger">
+            <div class="Loader"></div>
+          </div>
+      </div>
+    </div>
     <div w3-include-html="./components/mainBar/mainBar.html"></div>
     <div class="List">
       <div class="Intro">
         <div class="Left">
           <text class="AllQuestions">All Questions</text>
         </div>
-        <button class="Button" onclick="window.open('http://localhost/askQuestion.html','_self')">
+        <button class="Button" onclick="Modal()">
           Ask Question
         </button>
-        <p class="Count">190230</p>
+        <p class="Count"></p>
         <button class="Button2">
           Filter
         </button>
@@ -34,9 +79,8 @@
       </div>
       <div class="table"></div>
       <div w3-include-html="./components/buttonForPage/buttonForPage.html"></div>
-    </div>  
-    
-    <template class="template-post">
+    </div>
+  <template class="template-post">
       <div class="Table">
         <div class="LeftPost">
           <p class="App-Votes">
@@ -59,10 +103,44 @@
           <img class="Image" src="user.jpg" alt="user"></img>
           <div class="PostDate"></div>
           <div class="UserName"></div>
-      </div>
-    </template>
-
+        </div>
+        <button class="Delete" onclick="Delete(id)">Delete</button>
+        <button class="UpdateButton" onclick="Update(id)">Update</button>
+        <p class="App-Id" name ="id"> </p>
+  </template>
+  <div class="modalUpdate">
+    <div class = "modalUpdate-content">
+      <div class="Close" onclick="CloseUpdate()">+</div>
+        <form class="Update">
+          <h1 class="UpdateH1">Update your post</h1>
+          <p class="Text">
+            <strong>Title</strong>
+          </p>
+          <p class="Description" >
+            Be specific and imagine you’re asking a question to another person
+          </p>
+          <input class="Update-Title" name="title" type="text" value=""/>
+          <p class="Text">
+            <strong>Body</strong>
+          </p>
+          <p class="Description">
+            Include all the information someone would need to answer your question
+          </p>
+          <input class="Update-Body" name="body" type="text" value=""/>
+          <p class="Text"> 
+            <strong>Tags</strong>
+          </p>
+          <p class="Description">
+            Add up to 5 tags to describe what your question is about
+          </p>
+          <input class="Update-Tags" name="tag" type="text" value=""/>
+          <input class="Update-Id" style = "display: none" value=""/>
+          <input class="UppButton" name="submit"type="submit"value="Update your post"/> 
+        </form>
+    </div>
+  </div>
     <script src="includeHTML.js"></script>
     <script src="index.js"></script>
+    <script src="checkQuestion.js"></script>
   </body>
 </html>
